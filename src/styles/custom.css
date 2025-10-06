@@ -1,0 +1,20 @@
+nav.flex.z-40.w-full.h-auto.items-center.justify-center.data-\[menu-open\=true\]\:border-none.sticky.top-0.inset-x-0.backdrop-blur-lg.data-\[menu-open\=true\]\:backdrop-blur-xl.backdrop-saturate-150.bg-dark.text-light.border-b.border-muted-dark.shadow-sm{
+    --navbar-height: 8rem!important;
+}
+
+.svg_custom {
+    display: inline;
+    vertical-align: sub;
+}
+.new_height{
+    height: 90%;
+}
+.row-gap-0 {
+    row-gap: 0px;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter.woff2') format('woff2');
+  font-weight: 100 900; /* range completo per il font variabile */
+  font-display: swap;
+}
