@@ -1,10 +1,22 @@
 //import { title } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
 import { FaDownload } from "react-icons/fa";
+import { Helmet } from 'react-helmet';
 
 export default function DocsPage() {
+      const pageUrl = "https://alessandroguelpa.it/about";
   return (
     <DefaultLayout>
+              <Helmet>
+        <title>About me | Alessandro Guelpa</title>
+        <meta name="description" content="Scopri chi è Alessandro Guelpa: sviluppatore, creativo e appassionato di tecnologia. Esplora il mio percorso, le mie competenze e la visione dietro ai miei progetti." />
+       <link rel="canonical" href={pageUrl} />
+
+        {/* Tag Open Graph (per i social) */}
+        <meta property="og:title" content="About me | Alessandro Guelpa" />
+        <meta property="og:description" content="Scopri chi è Alessandro Guelpa: sviluppatore, creativo e appassionato di tecnologia. Esplora il mio percorso, le mie competenze e la visione dietro ai miei progetti." />
+        <meta property="og:url" content={pageUrl} />
+      </Helmet>
       <h1 className="text-4xl text-violet-600 dark:text-violet-500 font-bold text-center">Chi sono</h1>
       <p className="text-center text-zinc-500 dark:text-zinc-400 mb-8">
         Una breve introduzione su di me.
@@ -12,13 +24,11 @@ export default function DocsPage() {
 
       <div className="text-lg leading-relaxed space-y-4 max-w-3xl mx-auto">
         <p>
-          Mi chiamo Alessandro e sono uno sviluppatore full-stack con una forte
-          propensione al front-end e una curiosità instancabile per tutto ciò
-          che riguarda lo sviluppo web.
+          Mi chiamo Alessandro e sono uno sviluppatore front-end specializzato in Shopify. 
+          
         </p>
         <p>
-          Attualmente lavoro su progetti e-commerce e soluzioni digitali che
-          integrano tecnologie moderne come React, Tailwind CSS e Ruby on Rails.
+          Attualmente lavoro su progetti e-commerce in Shopify ma sto ampliando le mie competenze verso il full-stack e sperimento con tecnologie moderne come React e Ruby on Rails.
         </p>
         <p>
           Nel tempo libero pratico Jujitsu, mi appassionano le auto e adoro

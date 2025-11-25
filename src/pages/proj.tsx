@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import DefaultLayout from "@/layouts/default";
 import Skills from "@/components/skills";
+import {Helmet} from "react-helmet";
 
 interface Repo {
   id: number;
@@ -41,14 +42,28 @@ export default function Projects() {
     fetch("https://api.github.com/users/AlessandroGuelpa/repos")
       .then((res) => res.json())
       .then((data) => {
-        const filtered = data.filter((repo: Repo) => !repo.fork);
-        setRepos(filtered);
-        setLoading(false);
-      });
+  const filtered = data.filter(
+    (repo: Repo) =>
+      !repo.fork &&
+      !["AlessandroGuelpa", "alessandroguelpa.github.io", "Esami-di-stato-update"].includes(repo.name)
+  );
+  setRepos(filtered);
+  setLoading(false);
+});
   }, []);
-
+      const pageUrl = "https://alessandroguelpa.it/project";
   return (
     <DefaultLayout>
+          <Helmet>
+        <title>Progetti | Alessandro Guelpa</title>
+        <meta name="description" content="Esplora il mio portfolio di progetti: dalle applicazioni web agli esperimenti di codice. Scopri le tecnologie che uso e la mia capacità di trasformare le idee in realtà." />
+                 <link rel="canonical" href={pageUrl} />
+
+        {/* Tag Open Graph (per i social) */}
+        <meta property="og:title" content="Progetti | Alessandro Guelpa" />
+        <meta property="og:description" content="Esplora il mio portfolio di progetti: dalle applicazioni web agli esperimenti di codice. Scopri le tecnologie che uso e la mia capacità di trasformare le idee in realtà." />
+        <meta property="og:url" content={pageUrl} />
+      </Helmet>
       <Skills />
       <div className="my-8 border-t border-muted-dark" />
 

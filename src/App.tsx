@@ -7,6 +7,7 @@ const AboutPage = lazy(() => import("@/pages/about"));
 const ProjPage = lazy(() => import("@/pages/proj"));
 const ContactPage = lazy(() => import("@/pages/contact"));
 const SportPage = lazy(() => import("@/pages/sports"));
+const Javascript_Compiler = lazy(() => import("@/pages/compiler"));
 
 
 function App() {
@@ -21,9 +22,10 @@ function App() {
       <Routes>
         <Route element={<IndexPage />} path="/" />
         <Route element={<ProjPage />} path="/project" />
-        <Route element={<ContactPage />} path="/Contact" />
+        <Route element={<ContactPage />} path="/contact" />
         <Route element={<AboutPage />} path="/about" />
         <Route element={<SportPage />} path="/sports" />
+        <Route element={<Javascript_Compiler />} path="/javascript-compiler" />
       </Routes>
     </Suspense>
   );

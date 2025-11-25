@@ -2,10 +2,22 @@ import DefaultLayout from "@/layouts/default";
 // @ts-ignore
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import {Helmet} from "react-helmet";
 
 export default function Sports() {
+    const pageUrl = "https://alessandroguelpa.it/sports";
   return (
     <DefaultLayout>
+       <Helmet>
+        <title>Sports | Alessandro Guelpa</title>
+        <meta name="description" content="Non solo codice: scopri la mia passione per lo sport. Una raccolta di pensieri, esperienze e traguardi sportivi che mi motivano ogni giorno a superare i miei limiti." />
+      <link rel="canonical" href={pageUrl} />
+
+        {/* Tag Open Graph (per i social) */}
+        <meta property="og:title" content="Sports | Alessandro Guelpa" />
+        <meta property="og:description" content="Non solo codice: scopri la mia passione per lo sport. Una raccolta di pensieri, esperienze e traguardi sportivi che mi motivano ogni giorno a superare i miei limiti." />
+        <meta property="og:url" content={pageUrl} />
+      </Helmet>
       <section className="max-w-3xl mx-auto text-center px-4 py-0 space-y-6">
         <h1 className="font-sans text-4xl text-violet-600 dark:text-violet-500 font-bold">
           Sport e Passioni

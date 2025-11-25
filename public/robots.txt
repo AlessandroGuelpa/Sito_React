@@ -1,0 +1,13 @@
+# /robots.txt
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/private/
+Disallow: /drafts/
+Disallow: /404
+Disallow: /500
+# Evita duplicati di query se lo schema non porta valore SEO
+Disallow: /*?*
+# Rimuovi la riga sopra se usi filtri faceted essenziali
+
+Sitemap: https://alessandroguelpa.it/sitemap.xml

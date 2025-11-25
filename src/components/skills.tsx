@@ -11,7 +11,7 @@ import {
   SiVite,
   SiRuby,
   SiRubyonrails,
-  SiPostgresql,
+  SiMysql,
   SiShopify,
 } from "react-icons/si";
 import { VscCode } from "react-icons/vsc";
@@ -22,6 +22,10 @@ const skills = {
     { name: "HTML", icon: <FaHtml5 className="text-orange-500" /> },
     { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
     { name: "JavaScript", icon: <FaJs className="text-yellow-400" /> },
+    {
+      name: "Shopify (Liquid)",
+      icon: <SiShopify className="text-green-600" />,
+    },
     { name: "React", icon: <FaReact className="text-cyan-400" /> },
     { name: "Tailwind CSS", icon: <SiTailwindcss className="text-sky-400" /> },
     { name: "Vite", icon: <SiVite className="text-purple-500" /> },
@@ -29,7 +33,7 @@ const skills = {
   Backend: [
     { name: "Ruby", icon: <SiRuby className="text-red-500" /> },
     { name: "Ruby on Rails", icon: <SiRubyonrails className="text-red-600" /> },
-    { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-600" /> },
+    { name: "MySQL", icon: <SiMysql className="text-blue-600" /> },
     {
       name: "API REST",
       icon: <span className="text-gray-600 dark:text-gray-300">🔗</span>,
@@ -40,10 +44,6 @@ const skills = {
     {
       name: "GitHub",
       icon: <FaGithub className="text-gray-800 dark:text-white" />,
-    },
-    {
-      name: "Shopify (Liquid)",
-      icon: <SiShopify className="text-green-600" />,
     },
     { name: "VSCode", icon: <VscCode className="text-blue-500" /> },
     { name: "Sublime Text", icon: <SublimeIcon /> },
