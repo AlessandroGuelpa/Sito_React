@@ -14,6 +14,7 @@ export default {
       colors: {
         // ⚫ Background e base
         dark: "#0f0f0f",
+        black: "#000000",
         light: "#ffffff",
 
         // 🟣 Palette primaria
