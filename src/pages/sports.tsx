@@ -41,6 +41,7 @@ export default function Sports() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
           {/* Colonna sinistra - due foto quadrate (lazy) */}
           <div className="grid grid-rows-2 gap-6">
+            <div className="overflow-hidden rounded-xl shadow-lg h-69 w-full"></div>
             <LazyLoadImage
               src="/mma5.webp"
               alt="Ishirioku Clan"
@@ -48,6 +49,8 @@ export default function Sports() {
               loading="lazy"
               className="rounded-xl shadow-lg object-cover w-full h-69 transition-transform hover:scale-110"
             />
+            </div>
+            <div className="overflow-hidden rounded-xl shadow-lg h-69 w-full">
             <LazyLoadImage
               src="/mma1.webp"
               alt="Trinity Jujitsu"
@@ -55,6 +58,7 @@ export default function Sports() {
               loading="lazy"
               className="rounded-xl shadow-lg object-cover w-full h-69 transition-transform hover:scale-110"
             />
+            </div>
           </div>
 
           {/* Colonna destra - immagine LCP (NO lazy, preload in index.html) */}
