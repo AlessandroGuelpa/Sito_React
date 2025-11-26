@@ -29,6 +29,7 @@ export default function DefaultLayout({
           <p className="text-primary">Alessandro Guelpa</p>
         </Link>
       </footer>
+      <Analytics />
     </div>
   );
 }
