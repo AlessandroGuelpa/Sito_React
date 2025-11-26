@@ -1,12 +1,13 @@
-import { Link } from "@heroui/link";
+//import { Link } from "@heroui/link";
 //import { Snippet } from "@heroui/snippet";
 //import { Code } from "@heroui/code";
-import { button as buttonStyles } from "@heroui/theme";
-import clsx from "clsx";
+//import { button as buttonStyles } from "@heroui/theme";
+//import clsx from "clsx";
 import { siteConfig } from "@/config/site";
 //import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
+import CustomLink from '@/components/customlink';
 
 export default function IndexPage() {
   return (
@@ -24,17 +25,12 @@ export default function IndexPage() {
         </div>
 
         <div className="flex gap-3">
-          <Link
-            isExternal
-            className={clsx(
-  buttonStyles({ variant: "bordered", radius: "full" }),
-  "hover:scale-105 transition"
-)}
+          <CustomLink
             href={siteConfig.links.github}
           >
             <GithubIcon size={20} />
             GitHub
-          </Link>
+          </CustomLink>
         </div>
       </section>
     </DefaultLayout>

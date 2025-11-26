@@ -13,7 +13,7 @@ const CustomLink = ({ href, children }: CustomLinkProps) => {
       className="group relative inline-block text-violet-600 dark:text-violet-500 font-medium cursor-pointer"
     >
       {children}
-      <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-indigo-600 transition-all duration-300 ease-in-out group-hover:w-full"></span>
+      <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-violet-600 transition-all duration-300 ease-in-out group-hover:w-full"></span>
     </a>
   );
 };

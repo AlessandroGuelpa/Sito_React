@@ -1,7 +1,8 @@
-import { Link } from "@heroui/link";
+//import { Link } from "@heroui/link";
 
 import { Navbar } from "@/components/navbar";
 import { motion } from "framer-motion";
+import CustomLink from '@/components/customlink';
 
 export default function DefaultLayout({
   children,
@@ -23,10 +24,10 @@ export default function DefaultLayout({
       </main>
 
       <footer className="w-full flex items-center justify-center py-3">
-        <Link className="flex items-center gap-1 text-current" href="/">
+        <CustomLink href="/">
           <span className="text-default-600">Powered by</span>
           <p className="text-primary">Alessandro Guelpa</p>
-        </Link>
+        </CustomLink>
       </footer>
     </div>
   );
