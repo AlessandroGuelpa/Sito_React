@@ -17,6 +17,7 @@ import clsx from "clsx";
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { GithubIcon, Logo2, SearchIcon } from "@/components/icons";
+import CustomLink from '@/components/customlink';
 
 export const Navbar = () => {
   const searchInput = (
@@ -55,16 +56,11 @@ export const Navbar = () => {
         <div className="hidden lg:flex gap-4 justify-start ml-2">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
-              <Link
-                className={clsx(
-                  linkStyles({ color: "foreground" }),
-                  "text-light hover:text-primary-dark transition-colors",
-    "data-[active=true]:text-primary data-[active=true]:font-medium"
-                )}
+              <CustomLink
                 href={item.href}
               >
                 {item.label}
-              </Link>
+              </CustomLink>
             </NavbarItem>
           ))}
         </div>
