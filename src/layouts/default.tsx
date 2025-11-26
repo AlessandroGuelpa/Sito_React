@@ -1,5 +1,4 @@
 import { Link } from "@heroui/link";
-import { Analytics } from "@vercel/analytics/next"
 
 import { Navbar } from "@/components/navbar";
 import { motion } from "framer-motion";
@@ -29,7 +28,6 @@ export default function DefaultLayout({
           <p className="text-primary">Alessandro Guelpa</p>
         </Link>
       </footer>
-      <Analytics />
     </div>
   );
 }
